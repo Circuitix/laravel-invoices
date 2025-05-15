@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelDaily\Invoices\Classes;
+namespace Circuitix\Invoices\Classes;
 
 /**
  * Class Buyer

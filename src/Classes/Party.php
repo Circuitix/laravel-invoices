@@ -1,8 +1,8 @@
 <?php
 
-namespace LaravelDaily\Invoices\Classes;
+namespace Circuitix\Invoices\Classes;
 
-use LaravelDaily\Invoices\Contracts\PartyContract;
+use Circuitix\Invoices\Contracts\PartyContract;
 
 /**
  * Class Party

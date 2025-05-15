@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelDaily\Invoices\Facades;
+namespace Circuitix\Invoices\Facades;
 
 use Illuminate\Support\Facades\Facade;
 

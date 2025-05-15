@@ -78,10 +78,10 @@ return [
         /*
          * Class used in templates via $invoice->seller
          *
-         * Must implement LaravelDaily\Invoices\Contracts\PartyContract
-         *      or extend LaravelDaily\Invoices\Classes\Party
+         * Must implement Circuitix\Invoices\Contracts\PartyContract
+         *      or extend Circuitix\Invoices\Classes\Party
          */
-        'class' => \LaravelDaily\Invoices\Classes\Seller::class,
+        'class' => \Circuitix\Invoices\Classes\Seller::class,
 
         /*
          * Default attributes for Seller::class

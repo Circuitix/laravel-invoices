@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelDaily\Invoices;
+namespace Circuitix\Invoices;
 
 use Illuminate\Support\ServiceProvider;
 

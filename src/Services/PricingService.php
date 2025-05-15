@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelDaily\Invoices\Services;
+namespace Circuitix\Invoices\Services;
 
 class PricingService
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelDaily\Invoices;
+namespace Circuitix\Invoices;
 
 use Barryvdh\DomPDF\Facade\Pdf as PDF;
 use Carbon\Carbon;
@@ -8,14 +8,14 @@ use Exception;
 use Illuminate\Http\Response;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\View;
-use LaravelDaily\Invoices\Classes\InvoiceItem;
-use LaravelDaily\Invoices\Classes\Party;
-use LaravelDaily\Invoices\Contracts\PartyContract;
-use LaravelDaily\Invoices\Traits\CurrencyFormatter;
-use LaravelDaily\Invoices\Traits\DateFormatter;
-use LaravelDaily\Invoices\Traits\InvoiceHelpers;
-use LaravelDaily\Invoices\Traits\SavesFiles;
-use LaravelDaily\Invoices\Traits\SerialNumberFormatter;
+use Circuitix\Invoices\Classes\InvoiceItem;
+use Circuitix\Invoices\Classes\Party;
+use Circuitix\Invoices\Contracts\PartyContract;
+use Circuitix\Invoices\Traits\CurrencyFormatter;
+use Circuitix\Invoices\Traits\DateFormatter;
+use Circuitix\Invoices\Traits\InvoiceHelpers;
+use Circuitix\Invoices\Traits\SavesFiles;
+use Circuitix\Invoices\Traits\SerialNumberFormatter;
 
 /**
  * Class Invoices.

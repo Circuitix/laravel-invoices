@@ -1,11 +1,11 @@
 <?php
 
-namespace LaravelDaily\Invoices\Traits;
+namespace Circuitix\Invoices\Traits;
 
 use Exception;
 use Illuminate\Support\Str;
-use LaravelDaily\Invoices\Contracts\PartyContract;
-use LaravelDaily\Invoices\Services\PricingService;
+use Circuitix\Invoices\Contracts\PartyContract;
+use Circuitix\Invoices\Services\PricingService;
 use Symfony\Component\HttpFoundation\File\File;
 
 /**

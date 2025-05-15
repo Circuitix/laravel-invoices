@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelDaily\Invoices\Traits;
+namespace Circuitix\Invoices\Traits;
 
 use Illuminate\Support\Facades\Storage;
 

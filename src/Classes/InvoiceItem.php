@@ -1,9 +1,9 @@
 <?php
 
-namespace LaravelDaily\Invoices\Classes;
+namespace Circuitix\Invoices\Classes;
 
 use Exception;
-use LaravelDaily\Invoices\Services\PricingService;
+use Circuitix\Invoices\Services\PricingService;
 
 /**
  * Class InvoiceItem

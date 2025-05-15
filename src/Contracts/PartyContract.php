@@ -1,6 +1,6 @@
 <?php
 
-namespace LaravelDaily\Invoices\Contracts;
+namespace Circuitix\Invoices\Contracts;
 
 /**
  * Interface PartyContract
