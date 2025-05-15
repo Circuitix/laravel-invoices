@@ -36,6 +36,11 @@ class Invoice
     public $name;
 
     /**
+     * @var string
+     */
+    public $reference;
+
+    /**
      * @var PartyContract
      */
     public $seller;
@@ -84,6 +89,11 @@ class Invoice
      * @var float
      */
     public $total_discount;
+
+    /**
+     * @var bool;
+     */
+    public $is_tax_included;
 
     /**
      * @var float

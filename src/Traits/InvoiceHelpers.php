@@ -33,6 +33,13 @@ trait InvoiceHelpers
         return $this;
     }
 
+    public function reference(string $reference)
+    {
+        $this->reference = $reference;
+
+        return $this;
+    }
+
     public function notes(string $notes)
     {
         $this->notes = $notes;
@@ -70,6 +77,17 @@ trait InvoiceHelpers
     public function shipping(float $amount)
     {
         $this->shipping_amount = $amount;
+
+        return $this;
+    }
+
+    /**
+     * @param bool $includeTax
+     * @return $this
+     */
+    public function isTaxIncluded (bool $includeTax): static
+    {
+        $this->is_tax_included = $includeTax;
 
         return $this;
     }
@@ -133,6 +151,14 @@ trait InvoiceHelpers
         $this->total_amount = $total_amount;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTotalAmount(): string
+    {
+        return $this->formatCurrency($this->total_amount);
     }
 
     /**
@@ -277,6 +303,22 @@ trait InvoiceHelpers
         $this->total_discount = $totalAmount - $newTotalAmount;
     }
 
+    /**
+     * @return array
+     */
+    public function mapTaxableAmountByTaxRates(): array
+    {
+        $taxes = [];
+
+        foreach ( $this->items as $item ) {
+            if ( property_exists($item, 'tax_percentage') && ! is_null($item->tax_percentage) && property_exists($item, 'tax') && ! is_null($item->tax) ) {
+                $taxes[$item->tax_percentage] = ($taxes[$item->tax_percentage] ?? 0) + $item->tax;
+            }
+        }
+
+        return $taxes;
+    }
+
     public function calculateTax(): void
     {
         if ($this->taxable_amount) {
@@ -342,6 +384,7 @@ trait InvoiceHelpers
 
     /**
      * @return $this
+     * @throws Exception
      */
     public function calculate()
     {

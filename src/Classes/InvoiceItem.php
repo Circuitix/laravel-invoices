@@ -51,6 +51,11 @@ class InvoiceItem
     public $discount_percentage;
 
     /**
+     * @var bool
+     */
+    public $is_tax_included;
+
+    /**
      * @var float
      */
     public $tax;
@@ -65,9 +70,10 @@ class InvoiceItem
      */
     public function __construct()
     {
-        $this->quantity = 1.0;
-        $this->discount = 0.0;
-        $this->tax      = 0.0;
+        $this->quantity         = 1.0;
+        $this->discount         = 0.0;
+        $this->tax              = 0.0;
+        $this->is_tax_included  = true;
     }
 
     public static function make($title)
@@ -185,6 +191,17 @@ class InvoiceItem
     public function discountByPercent(float $amount)
     {
         $this->discount($amount, true);
+
+        return $this;
+    }
+
+    /**
+     * @param bool $isTaxIncluded
+     * @return $this
+     */
+    public function is_tax_included(bool $isTaxIncluded)
+    {
+        $this->is_tax_included = $isTaxIncluded;
 
         return $this;
     }
