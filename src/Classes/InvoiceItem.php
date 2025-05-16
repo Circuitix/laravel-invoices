@@ -199,7 +199,7 @@ class InvoiceItem
      * @param bool $isTaxIncluded
      * @return $this
      */
-    public function is_tax_included(bool $isTaxIncluded)
+    public function isTaxIncluded(bool $isTaxIncluded)
     {
         $this->is_tax_included = $isTaxIncluded;
 
